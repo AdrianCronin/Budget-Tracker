@@ -23,8 +23,6 @@ request.onupgradeneeded = event => {
     });
 };
 
-
-
 const checkDatabase = () => {
     let transaction = db.transaction(["budgetStore"], "readwrite");
 
@@ -38,7 +36,7 @@ const checkDatabase = () => {
 
                 const response = await fetch('/api/transaction/bulk', {
                     method: 'POST',
-                    body: JSON.stringify(getAll.result),
+                    body: JSON.stringify(getStore.result),
                     headers: {
                         Accept: 'application/json, text/plain, */*',
                         'Content-Type': 'application/json',
@@ -60,7 +58,12 @@ const checkDatabase = () => {
     }
 };
 
-const saveRecord = () => {
+const saveRecord = (record) => {
+    const transaction = db.transaction(["budgetStore"], "readwrite");
 
+    const store = transaction.objectStore("budgetStore");
 
+    store.add(record);
 }
+
+window.addEventListener("online", checkDatabase);
