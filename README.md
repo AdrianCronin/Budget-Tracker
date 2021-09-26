@@ -1,5 +1,6 @@
 # Budget-Tracker
 
+[Link to Deployed App](https://intense-chamber-46703.herokuapp.com/)
 
 ## Description
 
@@ -14,8 +15,17 @@ An installable budget tracking app. Users can add and subtract funds while onlin
 
 ## Usage
 
-Enter a transaction name and dollar amount. Click either '+ Add Funds' or '- Subtract Funds' and the amount entered will be added or subtracted to the current budget total. 
+1. Go to the [Budget Tracker App](https://intense-chamber-46703.herokuapp.com/) 
+![New User Homepage](./assets/images/budget-tracker.png)
 
+2. Enter a transaction name and dollar amount.
+![New Transaction](./assets/images/add-funds.png)
+
+3. Click either '+ Add Funds' or '- Subtract Funds' and the amount entered will be added or subtracted to the current budget total.
+![Add or Remove funds](./assets/images/subtracted-funds.png)
+
+4. Click the three dots in the top right of the screen (in Chrome), then select 'Install Budget Tracker' to install the app
+![Install App](./assets/images/app-install.jpg)
 
 ## Technologies used
 * Javascript
